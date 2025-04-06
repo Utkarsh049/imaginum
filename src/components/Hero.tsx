@@ -1,5 +1,6 @@
 import explore from '../../public/explore.svg';
 import { TextHoverEffect } from "./ui/text-hover-effect";
+import element from '../../public/element.svg';
 
 const Hero = () => {
   return (
@@ -22,6 +23,8 @@ const Hero = () => {
       <div className="h-[25rem] flex items-center justify-center font-raleway mt-8">
         <TextHoverEffect text="IMAGINUM" />
       </div>
+      <img src={element} alt="#" className='absolute h-40 top-[22rem] left-[6rem]' />
+      <img src={element} alt="#" className='absolute h-28 top-[10rem] right-[12rem]' />
     </div>
     </>
   );
