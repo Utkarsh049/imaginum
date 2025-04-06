@@ -1,10 +1,10 @@
-import Light from './components/Light'
 import Hero from './components/Hero'
+import Herobg from './components/Herobg'
 
 const App = () => {
   return (
     <>
-    <Light/>
+    <Herobg/>
     <Hero/>
     </>
   )
