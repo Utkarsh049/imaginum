@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export const TextHoverEffect = ({
@@ -88,14 +88,21 @@ export const TextHoverEffect = ({
         </mask>
       </defs>
       <text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[raleway] text-7xl font-bold dark:stroke-neutral-800"
-        style={{ opacity: hovered ? 0.7 : 0 }}
-      >
+  x="50%"
+  y="50%"
+  textAnchor="middle"
+  dominantBaseline="middle"
+  strokeWidth="0.3"
+  className={`
+    fill-transparent 
+    stroke-neutral-200 
+    font-[raleway] 
+    text-7xl 
+    font-bold 
+    dark:stroke-neutral-800
+    ${hovered ? 'opacity-70' : 'opacity-0'}
+  `}
+>
         {text}
       </text>
       <motion.text

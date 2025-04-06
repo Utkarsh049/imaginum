@@ -1,5 +1,3 @@
-import React from "react";
-
 const Light = () => {
   return (
     <div className="absolute top-[-38rem] left-0 w-full h-full flex justify-center items-center z-[-20]">
