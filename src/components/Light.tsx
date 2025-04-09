@@ -1,7 +1,7 @@
-const Light = () => {
+const Light = ({ top, left }: { top: number; left: number }) => {
   return (
-    <div className="absolute top-[-38rem] left-0 w-full h-full flex justify-center items-center z-[-20]">
-        <div className="h-[40rem] w-[40rem] rounded-full bg-[#006fff]  blur-[150px]"></div>
+    <div className={`absolute top-[${top}rem] left-[${left}rem]`}>
+      <div className="h-[40rem] w-[40rem] rounded-full bg-[#006fff] blur-[150px]"></div>
     </div>
   );
 };

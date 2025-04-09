@@ -1,33 +1,38 @@
-import explore from '../../public/explore.svg';
-import { TextHoverEffect } from "./ui/text-hover-effect";
-import element from '../../public/element.svg';
+import explore from '/explore.svg'
+import element from '/element.svg'
+import { TextHoverEffect } from "./ui/text-hover-effect"
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <>
-    <div className='h-[85vh] flex flex-col justify-between mt-16 py-8'>
-      <div className="flex justify-center flex-col items-center gap-6 ">
-        <div className="px-4 py-1 text-[#D4FA00] border border-[#D4FA00] rounded-full text-[0.75rem]   text-center font-lexend font-light">
+    <div className='lg:min-h-[85vh] min-h-[48vh] flex flex-col justify-between mt-16 py-8 px-6 md:px-12'>
+      <div className="flex flex-col items-center gap-6 text-center">
+        <div className="px-4 py-1 text-[#D4FA00] border border-[#D4FA00] rounded-full text-xs md:text-sm font-lexend font-light">
           Innovate • Design • Build
         </div>
-        <h1 className="font-bold text-white text-[3rem] text-center capitalize leading-[140%] tracking-[0]">
-          Building the future with smart,
-          <br />
-          seamless technology.
+
+        <h1 className="font-bold text-white text-[2rem] md:text-[3rem] capitalize leading-[140%]">
+          Building the future with smart,<br />seamless technology.
         </h1>
-        <button className="bg-white flex px-4 py-2 rounded-md shadow-[0px_4px_60px_0px_#398FFF99]">
-          <p className="pl-2">Explore Now</p>{" "}
-          <img src={explore} alt="" />
-        </button>
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          className="relative overflow-hidden group rounded-full px-6 py-2 bg-white text-black font-poppins flex items-center gap-2 transition-all duration-300 shadow-[0px_4px_20px_0px_#398FFF33] hover:bg-black hover:text-white"
+        >
+          <span className="relative z-10">Explore Now</span>
+          <img src={explore} alt="" className="relative z-10 w-4 h-4 transition duration-300 group-hover:invert" />
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#398FFF66] to-transparent translate-x-[-100%] group-hover:translate-x-full transition-transform duration-500 ease-in-out blur-md opacity-80" />
+        </motion.button>
       </div>
-      <div className="h-[25rem] flex items-center justify-center font-raleway mt-8">
+
+      <div className="hidden h-[20rem] md:h-[25rem] lg:flex items-center justify-center font-raleway mt-12 mx-4">
         <TextHoverEffect text="IMAGINUM" />
       </div>
-      <img src={element} alt="#" className='absolute h-40 top-[22rem] left-[6rem]' />
-      <img src={element} alt="#" className='absolute h-28 top-[10rem] right-[12rem]' />
-    </div>
-    </>
-  );
-};
 
-export default Hero;
+      <img src={element} alt="#" className='absolute h-32 md:h-40 top-[22rem] left-6 -z-20' />
+      <img src={element} alt="#" className='absolute h-24 md:h-28 top-[10rem] right-12 -z-20' />
+    </div>
+  )
+}
+
+export default Hero

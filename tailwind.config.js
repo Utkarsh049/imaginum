@@ -11,6 +11,9 @@ export default {
         'montserrat': ['Montserrat', 'sans-serif'],
         'lexend': ['Lexend', 'sans-serif'],
         'raleway': ['Raleway', 'sans-serif'],
+        'geist': ['Geist', 'sans-serif'],
+        'figtree': ['FigTree', 'sans-serif'],
+        'inconsolata': ['Inconsolata', 'monospace'],
       }
     },
   },
