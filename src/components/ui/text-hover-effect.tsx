@@ -64,7 +64,7 @@ export const TextHoverEffect = ({
           r="20%"
           initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}
+          transition={{ duration: duration ?? 0, ease: "easeOut",type: "spring" ,stiffness: 300, damping: 50 }}
 
           // example for a smoother animation below
 
@@ -95,11 +95,11 @@ export const TextHoverEffect = ({
   strokeWidth="0.3"
   className={`
     fill-transparent 
-    stroke-neutral-200 
+    stroke-gray-800 
     font-[raleway] 
     text-7xl 
     font-bold 
-    dark:stroke-neutral-800
+    dark:stroke-gray-800
     ${hovered ? 'opacity-70' : 'opacity-0'}
   `}
 >
@@ -111,7 +111,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[raleway] text-7xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent stroke-gray-800 font-[raleway] text-7xl font-bold dark:stroke-gray-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,

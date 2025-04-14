@@ -1,9 +1,17 @@
 import explore from '/explore.svg'
 import element from '/element.svg'
 import { TextHoverEffect } from "./ui/text-hover-effect"
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, animate } from 'framer-motion'
 
 const Hero = () => {
+  // For img1
+  const img1X = useMotionValue(0)
+  const img1Y = useMotionValue(0)
+  
+  // For img2
+  const img2X = useMotionValue(0)
+  const img2Y = useMotionValue(0)
+
   return (
     <div className='lg:min-h-[85vh] min-h-[48vh] flex flex-col justify-between mt-16 py-8 px-6 md:px-12'>
       <div className="flex flex-col items-center gap-6 text-center">
@@ -25,12 +33,43 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="hidden h-[20rem] md:h-[25rem] lg:flex items-center justify-center font-raleway mt-12 mx-4">
+      <div className="hidden h-[20rem] md:h-[25rem] lg:flex items-center justify-center font-raleway mt-12 mx-4 ">
         <TextHoverEffect text="IMAGINUM" />
       </div>
 
-      <img src={element} alt="#" className='absolute h-32 md:h-40 top-[22rem] left-6 -z-20' />
-      <img src={element} alt="#" className='absolute h-24 md:h-28 top-[10rem] right-12 -z-20' />
+      <motion.img
+        style={{ x: img1X, y: img1Y }}
+        drag
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        dragElastic={0.5}
+        dragMomentum={false}
+        whileTap={{ scale: 0.95 }}
+        whileDrag={{ zIndex: 50 }}
+        onDragEnd={() => {
+          animate(img1X, 0, { type: "spring", stiffness: 200 })
+          animate(img1Y, 0, { type: "spring", stiffness: 200 })
+        }}
+        src={element}
+        alt="#"
+        className='absolute h-28 md:h-40 md:top-[22rem] md:left-6 left-3 top-[26rem] cursor-grab active:cursor-grabbing'
+      />
+
+      <motion.img
+        style={{ x: img2X, y: img2Y }}
+        drag
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        dragElastic={0.5}
+        dragMomentum={false}
+        whileTap={{ scale: 0.95 }}
+        whileDrag={{ zIndex: 50 }}
+        onDragEnd={() => {
+          animate(img2X, 0, { type: "spring", stiffness: 200 })
+          animate(img2Y, 0, { type: "spring", stiffness: 200 })
+        }}
+        src={element}
+        alt="#"
+        className='absolute h-24 md:h-28 top-[10rem] md:right-12 right-6 cursor-grab active:cursor-grabbing'
+      />
     </div>
   )
 }

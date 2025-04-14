@@ -1,5 +1,7 @@
 import terminal from "/terminal.svg";
-import about from "/about.svg";
+// import about from "/about.svg";
+// import { OrbitingCircles } from "./magicui/orbiting-circles";
+import OrbitComponent from "./Orbit";
 
 const About = () => {
   return (
@@ -34,13 +36,14 @@ const About = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-          <img src={about} alt="" className="h-[24rem] md:h-[36rem]" />
+          <OrbitComponent />
         </div>
       </div>
 
-      <div className='absolute top-[20vh] -left-[20rem] -z-[20] hidden md:block'>
-        <div className="h-[36rem] w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[150px]"></div>
-      </div>
+      <div className="absolute top-[32vh] md:top-[20vh] left-1/2 -translate-x-1/2 md:left-[-20rem] md:translate-x-0 -z-[20]">
+  <div className="h-[24rem] w-[24rem] md:h-[36rem] md:w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[300px]"></div>
+</div>
+
     </div>
   );
 };
