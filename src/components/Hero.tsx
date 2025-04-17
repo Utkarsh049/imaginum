@@ -4,11 +4,9 @@ import { TextHoverEffect } from "./ui/text-hover-effect"
 import { motion, useMotionValue, animate } from 'framer-motion'
 
 const Hero = () => {
-  // For img1
   const img1X = useMotionValue(0)
   const img1Y = useMotionValue(0)
   
-  // For img2
   const img2X = useMotionValue(0)
   const img2Y = useMotionValue(0)
 

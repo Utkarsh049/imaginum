@@ -51,18 +51,23 @@ const OrbitComponent: React.FC = () => {
   const isMobile = screenWidth < 768; // Tailwind 'md' breakpoint
 
   const techIcons: IconProps[] = [
-    { src: vite, radius: getRadius(isMobile ? 18 : 10), angle: 0, direction: 1 },
-    { src: figma, radius: getRadius(isMobile ? 18 : 10), angle: 120, direction: 1 },
-    { src: react, radius: getRadius(isMobile ? 18 : 10), angle: 240, direction: 1 },
-    { src: github, radius: getRadius(isMobile ? 18 : 10), angle: 360, direction: 1 },
-    { src: express, radius: getRadius(isMobile ? 28 : 16), angle: 0, direction: -1 },
-    { src: js, radius: getRadius(isMobile ? 28 : 16), angle: 120, direction: -1 },
-    { src: tailwind, radius: getRadius(isMobile ? 28 : 16), angle: 240, direction: -1 },
-    { src: mongodb, radius: getRadius(isMobile ? 28 : 16), angle: 360, direction: -1 },
+    // Inner orbit (clockwise)
+    { src: vite, radius: getRadius(isMobile ? 24 : 12), angle: 0, direction: 1 },
+    { src: figma, radius: getRadius(isMobile ? 24 : 12), angle: 90, direction: 1 },
+    { src: react, radius: getRadius(isMobile ? 24 : 12), angle: 180, direction: 1 },
+    { src: github, radius: getRadius(isMobile ? 24 : 12), angle: 270, direction: 1 },
+  
+    // Outer orbit (anti-clockwise)
+    { src: express, radius: getRadius(isMobile ? 35 : 20), angle: 45, direction: -1 },
+    { src: js, radius: getRadius(isMobile ? 35 : 20), angle: 135, direction: -1 },
+    { src: tailwind, radius: getRadius(isMobile ? 35 : 20), angle: 225, direction: -1 },
+    { src: mongodb, radius: getRadius(isMobile ? 35 : 20), angle: 315, direction: -1 },
   ];
+  
+  
 
   return (
-    <div className="relative w-[90vw] h-[60vh] md:w-[40vw] md:h-[85vh] overflow-hidden flex items-center justify-center">
+    <div className="relative w-[90vw] h-[60vh] md:w-[40vw] md:h-[80vh] overflow-hidden flex items-center justify-center">
       <div className="absolute w-[60vw] h-[60vw] md:w-[30vw] md:h-[30vw] rounded-full bg-blue-600 blur-3xl opacity-30"></div>
       <div className="absolute w-[20vw] h-[20vw] md:w-[10vw] md:h-[10vw] bg-black rounded-full border-4 border-lime-400 flex items-center justify-center z-10">
         <img src={logo} alt="Company Logo" className="w-[14vw] h-[14vw] md:w-[7vw] md:h-[7vw]" />

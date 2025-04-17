@@ -88,14 +88,13 @@ const Projects = () => {
       {/* <Light top={170} left={20}></Light>
 <Light top={265} left={60}></Light> */}
 
-<div className="absolute top-[336vh] left-1/2 -translate-x-1/2 md:left-[36rem] md:translate-x-0 -z-[80]">
-  <div className="h-[24rem] w-[24rem] md:h-[36rem] md:w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[400px] md:blur-[600px]"></div>
-</div>
+      {/* <div className="absolute top-[336vh] left-1/2 -translate-x-1/2 md:left-[36rem] md:translate-x-0 -z-[80]">
+        <div className="h-[24rem] w-[24rem] md:h-[36rem] md:w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[400px] md:blur-[600px]"></div>
+      </div>
 
       <div className="absolute top-[460vh] left-1/2 -translate-x-1/2 md:top-[520vh] md:left-[60rem] md:translate-x-0 -z-[80]">
-  <div className="h-[24rem] w-[24rem] md:h-[36rem] md:w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[400px] md:blur-[600px]"></div>
-</div>
-
+        <div className="h-[24rem] w-[24rem] md:h-[36rem] md:w-[36rem] rounded-full bg-[#006fff] opacity-[75%] blur-[400px] md:blur-[600px]"></div>
+      </div> */}
     </>
   );
 };
