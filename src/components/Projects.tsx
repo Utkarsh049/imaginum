@@ -1,25 +1,31 @@
 import hexa from "/Hexagons.svg";
 import element from "/element.svg";
 import Card from "./Cards";
-import laptop from "/laptop.svg";
+import proj1 from "/proj1.svg";
+import proj2 from "/proj2.svg";
+import proj3 from "/proj3.svg";
+import square from "/square.svg";
+import { Toaster } from 'react-hot-toast';
+
 // import Light from './Light'
 import { motion, animate, useMotionValue } from "framer-motion";
 const Projects = () => {
-  const img1X = useMotionValue(0);
-  const img1Y = useMotionValue(0);
+  const img1X = useMotionValue(70);
+  const img1Y = useMotionValue(-70);
   return (
     <>
+      <Toaster position="top-center" />
       <motion.img
         style={{ x: img1X, y: img1Y }}
         drag
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        dragElastic={0.5}
+        dragElastic={0.7}
         dragMomentum={false}
         whileTap={{ scale: 0.95 }}
         whileDrag={{ zIndex: 50 }}
         onDragEnd={() => {
-          animate(img1X, 0, { type: "spring", stiffness: 200 });
-          animate(img1Y, 0, { type: "spring", stiffness: 200 });
+          animate(img1X, 70, { type: "spring", stiffness: 200 });
+          animate(img1Y, -70, { type: "spring", stiffness: 200 });
         }}
         src={element}
         alt="#"
@@ -32,8 +38,11 @@ const Projects = () => {
       />
       <div className="relative mt-48">
         <div className="text-white font-geist font-bold text-2xl md:text-3xl px-6 md:px-[8rem] flex flex-col gap-4">
-          <h1 className="pl-4 md:pl-[2rem]">Our Projects</h1>
-          <div className="border-gradient-custom w-[4rem]"></div>
+          <div className="flex items-center">
+            <img src={square} alt="image" className="size-9"/>
+            <h1 className="pl-4 md:pl-[1rem]">Our Projects</h1>
+          </div>
+          <div className="border-gradient-custom w-[7rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.50px] outline-cyan-400/40 rounded"></div>
         </div>
 
         <div className="px-6 md:px-[8rem] text-3xl md:text-6xl mt-4">
@@ -45,44 +54,48 @@ const Projects = () => {
         </div>
       </div>
       <Card
-        image={laptop}
+        image={proj1}
         name="CSED VIT"
         subtitle="Official Website"
-        description="Cloud-based control system for fleet management of autonomous drones with real-time telemetry and mission planning."
-        tags={["HTML", "CSS"]}
+        description="Created the official website for the CSED Club, enhancing their digital presence by showcasing events,projects, and resources, and enabling better engagement with members and visitors."
+        tags={["HTML", "CSS","JS","GSAP","Swiper Js","JQuery"]}
         liveUrl="https://csedvit.com/"
         buttonText="View Website"
         imagePosition="right"
+        statuss="LIVE"
       />
       <Card
-        image={laptop}
+        image={proj2}
         name="CAMPUSMART"
         subtitle="Shopping platform"
-        description="Cloud-based control system for fleet management of autonomous drones with real-time telemetry and mission planning."
-        tags={["HTML", "CSS"]}
-        liveUrl="https://csedvit.com/"
+        description="Campus Mart is a marketplace built for college students. It makes buying and selling items like books, gadgets, and projects easy on campus. The platform features a clean and user-friendly design."
+        tags={["React Js", "Node Js","Express Js","Mongo DB","Socket io","Tailwind CSS"]}
+        liveUrl=""
         buttonText="View Website"
         imagePosition="left"
+        statuss="Under Development"
       />
       <Card
-        image={laptop}
+        image={proj3}
         name="CABSYNC"
         subtitle="A Travel Partner"
-        description="Cloud-based control system for fleet management of autonomous drones with real-time telemetry and mission planning."
-        tags={["HTML", "CSS"]}
-        liveUrl="https://csedvit.com/"
+        description="CAB SYNC helps college students find travel partners for shared rides. Students can search for others going to the same destination or create rooms to connect with peers."
+           tags={["React Native", "Node Js","Socket io","Firebase"]}
+        liveUrl=""
         buttonText="View Website"
         imagePosition="right"
+        statuss="Under Development"
       />
       <Card
-        image={laptop}
-        name="YOUR NEXT PROJECT"
-        subtitle="Start building here"
-        description="Cloud-based control system for fleet management of autonomous drones with real-time telemetry and mission planning."
-        tags={["HTML", "CSS"]}
-        liveUrl="https://csedvit.com/"
-        buttonText="View Website"
+        image={""}
+        name="MORE PROJECT"
+        subtitle="COMING SOON.."
+        description="We get ideas all day . All of them are updated here as soon as we start working on them."
+        tags={[]}
+        liveUrl=""
+        buttonText="Coming Soon"
         imagePosition="left"
+        statuss="Start Building Today"
       />
 
       {/* <Light top={170} left={20}></Light>

@@ -39,7 +39,7 @@ const Hero = () => {
         style={{ x: img1X, y: img1Y }}
         drag
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        dragElastic={0.5}
+        dragElastic={0.8}
         dragMomentum={false}
         whileTap={{ scale: 0.95 }}
         whileDrag={{ zIndex: 50 }}
@@ -56,7 +56,7 @@ const Hero = () => {
         style={{ x: img2X, y: img2Y }}
         drag
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        dragElastic={0.5}
+        dragElastic={0.8}
         dragMomentum={false}
         whileTap={{ scale: 0.95 }}
         whileDrag={{ zIndex: 50 }}

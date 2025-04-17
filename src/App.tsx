@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Herobg />
       <Hero />
       <About />
@@ -16,7 +16,7 @@ const App = () => {
       <Expertise />
       <Contact/>
       <Footer/>
-    </>
+    </div>
   );
 };
 
