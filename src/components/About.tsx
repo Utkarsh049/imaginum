@@ -1,5 +1,6 @@
-import about from "/about.svg";
 import square from "/square.svg";
+import { useEffect, useState } from "react";
+import { OrbitingCircles, Icons } from "./magicui/orbiting-circles";
 import img1 from "/img1.svg";
 import img2 from "/img2.svg";
 import img3 from "/img3.svg";
@@ -12,8 +13,25 @@ const desc = ["Constantly pushing boundaries and exploring new technologies", "B
 const image = [img1, img2, img3, img4];
 
 const About = () => {
+  const [radiusLarge, setRadiusLarge] = useState(200);
+  const [radiusSmall, setRadiusSmall] = useState(130);
+  const [sizeset, setSizeset] = useState(38);
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      // You can tweak the values based on your design
+      setRadiusLarge(width < 768 ? 150 : 200);
+      setRadiusSmall(width < 768 ? 100 : 130);
+      setSizeset(width < 768? 32 : 48);
+    };
+
+    handleResize(); // set on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative">
+    <div id="about-home" className="relative">
       <div className="text-white font-geist font-bold text-2xl md:text-3xl px-6 md:px-[8rem] flex flex-col gap-4">
         <div className="flex items-center">
           <img src={square} alt="image" className="size-9"/>
@@ -55,8 +73,21 @@ const About = () => {
             ))}
         </div>
         <div className="flex items-center justify-center">
-          {/* <OrbitComponent /> */}
-          <img src={about} alt="" className="h-[32rem]" />
+          <div className="relative w-[95vw] lg:h-[95vw] max-w-[700px] max-h-[700px] min-w-[320px] min-h-[320px] aspect-square">
+            <OrbitingCircles iconSize={sizeset} radius={radiusLarge}>
+              <Icons.figma />
+              <Icons.github />
+              <Icons.nextjs />
+              <Icons.mongodb />
+            </OrbitingCircles>
+            <OrbitingCircles iconSize={sizeset} radius={radiusSmall} reverse speed={1}>
+              <Icons.react />
+              <Icons.node />
+              <Icons.tailwind />
+              <Icons.js />
+              <Icons.html />
+            </OrbitingCircles>
+          </div>
         </div>
       </div>
 

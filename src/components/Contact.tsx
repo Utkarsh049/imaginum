@@ -6,6 +6,9 @@ import contactbg from "/noise.svg";
 // import noise from '/noise.svg'
 const Contact = () => {
   return (
+      <div id='contact-home' className="min-h-[70vh] flex items-center justify-center px-4 mt-24 mb-24">
+      <div className={`rounded-2xl px-8 py-16 md:p-24  mx-[2rem] md:mx-[8rem] text-center  w-full text-white shadow-2xl flex flex-col gap-2`} style={{ backgroundImage:`url(${contactbg})` }}>
+
     <div className="min-h-[70vh] flex items-center justify-center px-4 mt-24 lg:mb-24  mb-12">
       <div
         className={`rounded-xl px-8 py-16 md:p-24  mx-[2rem] md:mx-[8rem] text-center  w-full text-white shadow-2xl flex flex-col gap-2`}

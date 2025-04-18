@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import logo from '/Imaginum.svg'
 import arrow from '/arrow.svg'
-
-const Navbar = () => {
+ 
+  const Navbar = () => {
   const [isHover, setIsHover] = useState(false)
 
   return (
     <div className="flex justify-between items-center h-[12vh] px-6 md:px-[6rem] z-20 w-full">
-      <img src={logo} alt="logo" className="h-[1.5rem] md:h-[2.5rem]" />
+      <img src={logo} alt="logo" className="h-[1.5rem] md:h-[2.1rem]"/>
 
       <motion.button
         onMouseEnter={() => setIsHover(true)}
@@ -22,14 +22,19 @@ const Navbar = () => {
           className="absolute left-0 top-0 h-full bg-white z-0"
         />
 
-        <div className="relative z-10 flex items-center gap-2">
-          <motion.p
-            className="font-poppins text-[0.5rem] md:text-base"
-            animate={{ color: isHover ? '#000000' : '#FFFFFF' }}
-            transition={{ duration: 0.3 }}
-          > 
-            Contact us
-          </motion.p>
+<div
+  onClick={() => {
+    document.getElementById('contact-home')?.scrollIntoView({ behavior: 'smooth' });
+  }}
+  className="relative z-10 flex items-center gap-2 cursor-pointer"
+>
+  <motion.p
+    className="font-poppins text-[0.5rem] md:text-base"
+    animate={{ color: isHover ? '#000000' : '#FFFFFF' }}
+    transition={{ duration: 0.3 }}
+  >
+    Contact us
+  </motion.p>
           <motion.img
             src={arrow}
             alt="#"

@@ -22,6 +22,9 @@ const Hero = () => {
         </h1>
 
         <motion.button
+        onClick={() => {
+          document.getElementById('about-home')?.scrollIntoView({ behavior: 'smooth' });
+        }}
           whileHover={{ scale: 1.05 }}
           className="relative overflow-hidden group rounded-full px-6 py-2 bg-white text-black font-poppins flex items-center gap-2 transition-all duration-300 shadow-[0px_4px_20px_0px_#398FFF33] hover:bg-black hover:text-white"
         >
@@ -31,9 +34,13 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="hidden h-[20rem] md:h-[25rem] lg:flex items-center justify-center font-raleway mt-12 mx-4 ">
+      {/* <div className="hidden h-[20rem] md:h-[22.9rem] lg:flex items-center justify-center font-raleway mt-12 mx-4 ">
         <TextHoverEffect text="IMAGINUM" />
-      </div>
+      </div> */}
+
+      <div className="hidden h-[20rem] md:h-[22.9rem] lg:flex items-center justify-center font-raleway mt-12 mx-4">
+      <TextHoverEffect text="IMAGINUM" />
+    </div>
 
       <motion.img
         style={{ x: img1X, y: img1Y }}
