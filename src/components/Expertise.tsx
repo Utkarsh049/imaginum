@@ -43,7 +43,7 @@ const Expertise = () => {
           to deliver outstanding solutions.
         </h1>
       </div>
-      <div className="flex flex-col items-center w-full px-4 md:px-6 lg:px-8">
+      <div className="flex flex-col items-center w-full px-6 md:px-6 lg:px-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 mt-24 w-full max-w-7xl ">
         <TechCards
             icon={exp1}

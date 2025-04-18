@@ -5,6 +5,7 @@ import proj1 from "/proj1.svg";
 import proj2 from "/proj2.svg";
 import proj3 from "/proj3.svg";
 import square from "/square.svg";
+import more from '/gradient.png'
 import { Toaster } from 'react-hot-toast';
 
 // import Light from './Light'
@@ -29,7 +30,7 @@ const Projects = () => {
         }}
         src={element}
         alt="#"
-        className="absolute h-28 md:h-40 md:top-[112rem] md:left-32 left-64 top-[130rem] z-20 cursor-grab active:cursor-grabbing"
+        className="absolute h-28 md:h-40 md:top-[112rem] md:left-32 left-56 top-[125rem] z-20 cursor-grab active:cursor-grabbing"
       />
       <img
         src={hexa}
@@ -46,7 +47,7 @@ const Projects = () => {
         </div>
 
         <div className="px-6 md:px-[8rem] text-3xl md:text-6xl mt-4">
-          <h1 className="text-[#A1B0D1] font-figtree font-bold">
+          <h1 className="text-[#A1B0D1] font-geist font-bold">
             We build <br />
             real world <span className="text-white">Projects</span> that <br />
             create impact
@@ -73,7 +74,7 @@ const Projects = () => {
         liveUrl=""
         buttonText="View Website"
         imagePosition="left"
-        statuss="Under Development"
+        statuss="In Progress"
       />
       <Card
         image={proj3}
@@ -84,10 +85,10 @@ const Projects = () => {
         liveUrl=""
         buttonText="View Website"
         imagePosition="right"
-        statuss="Under Development"
+        statuss="In Progress"
       />
       <Card
-        image={""}
+        image={more}
         name="MORE PROJECT"
         subtitle="COMING SOON.."
         description="We get ideas all day . All of them are updated here as soon as we start working on them."
@@ -95,7 +96,7 @@ const Projects = () => {
         liveUrl=""
         buttonText="Coming Soon"
         imagePosition="left"
-        statuss="Start Building Today"
+        statuss="Start Creating"
       />
 
       {/* <Light top={170} left={20}></Light>

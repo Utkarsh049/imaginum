@@ -31,15 +31,15 @@ const Card: React.FC<CardProps> = ({
   return (
     <div  
       className={`
-      rounded-2xl p-6 shadow-xl flex flex-col ${layoutDirection} 
-      gap-6 w-[84vw] mx-auto md:mt-24 mt-12 text-white origin-top-left bg-gradient-to-l from-blue-600 to-black rounded-[30px] outline outline-1 outline-offset-[-0.95px] outline-black backdrop-blur-[9.47px]`}
+      rounded-xl p-5 shadow-xl flex flex-col ${layoutDirection} 
+      gap-6 w-[90vw] mx-auto md:mt-24 mt-12 text-white origin-top-left bg-gradient-to-l from-blue-900 to-black rounded-[30px] outline outline-1 outline-offset-[-0.95px] outline-black backdrop-blur-[9.47px]`}
     >
      
       {image ? (
         <img
           src={image}
           alt="project"
-          className="w-full md:w-[45%] rounded-xl object-cover"
+          className="w-full md:w-[45%] rounded-lg object-cover"
         />
       ) : (
         <div className="text-3xl font-semibold font-figtree w-full md:w-2/3 md:h-[60vh] rounded-xl bg-stone-950">

@@ -23,7 +23,7 @@ const About = () => {
       </div>
 
       <div className="px-6 md:px-[8rem] text-3xl md:text-6xl mt-4">
-        <h1 className="text-[#A1B0D1] font-figtree font-bold">
+        <h1 className="text-[#A1B0D1] font-geist font-bold">
           Innovating <br />
           with <span className="text-white">technology</span> to create <br />a
           smarter future.
@@ -31,7 +31,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row px-6 md:px-[6rem] mt-12 gap-10 items-center justify-between">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="grid grid-cols-2 gap-10">
           {title
             .map((e, i) => (
               <div
@@ -48,7 +48,7 @@ const About = () => {
                     {e}
                   </h1>
                 </div>
-                <p className="text-white text-center px-4 sm:px-10 font-inconsolata text-base tracking-tighter">
+                <p className="text-white text-center px-4 sm:px-10 font-figtree text-base tracking-tighter">
                   {desc[i]}
                 </p>
               </div>
