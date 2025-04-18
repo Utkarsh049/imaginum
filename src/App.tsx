@@ -9,7 +9,7 @@ import Team from "./components/Team";
 
 const App = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Herobg />
       <Hero />
       <About />
@@ -18,7 +18,7 @@ const App = () => {
       <Team/>
       <Contact/>
       <Footer/>
-    </>
+    </div>
   );
 };
 
