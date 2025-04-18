@@ -10,8 +10,8 @@ import { Toaster } from 'react-hot-toast';
 // import Light from './Light'
 import { motion, animate, useMotionValue } from "framer-motion";
 const Projects = () => {
-  const img1X = useMotionValue(70);
-  const img1Y = useMotionValue(-70);
+  const img1X = useMotionValue(100);
+  const img1Y = useMotionValue(80);
   return (
     <>
       <Toaster position="top-center" />
@@ -19,13 +19,13 @@ const Projects = () => {
         style={{ x: img1X, y: img1Y }}
         drag
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        dragElastic={0.7}
+        dragElastic={0.8}
         dragMomentum={false}
         whileTap={{ scale: 0.95 }}
         whileDrag={{ zIndex: 50 }}
         onDragEnd={() => {
-          animate(img1X, 70, { type: "spring", stiffness: 200 });
-          animate(img1Y, -70, { type: "spring", stiffness: 200 });
+          animate(img1X, 100, { type: "spring", stiffness: 200 });
+          animate(img1Y, 80, { type: "spring", stiffness: 200 });
         }}
         src={element}
         alt="#"
