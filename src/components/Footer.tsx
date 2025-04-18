@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <div className="relative h-[40vh]">
-        <footer className="w-full text-white px-8 md:px-48 py-10 md:mb-0 ">
+        <footer className="w-full text-white px-8 md:px-48 py-10 md:mb-0">
           <div className="max-w-7xl mx-auto flex gap-8 border-b border-white/30 pb-10 justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-blue-500 mb-3 font-figtree">
